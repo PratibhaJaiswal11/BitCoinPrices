@@ -13,7 +13,7 @@ Bitcoin Price Tracker allow you to track the price movement of Bitcoin. Followin
         Dates should be yyyy-mm-dd format
   - /moving_average?from_date=2018-08-01&to_date=2018-09-01
   - /make_decision?last_x_days=50
-        Number of days which algorithm take care into account for moving average, 50 considered better
+        (last_x_days is the number of days which algorithm take care into account for moving average, 50 considered better)
   
 ### Installation
 clone the project and run BitcoinApp.scala as scala application, hit the apis at http://localhost:8080
