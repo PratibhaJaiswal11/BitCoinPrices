@@ -1,9 +1,9 @@
 # Bitcoin Price Tracke
 
-Bitcoin Price Tracke allow you to track the price movement of Bitcion. Following are the features:
+Bitcoin Price Tracker allow you to track the price movement of Bitcoin. Following are the features:
   - Last week,month, year prices
   - Price on a specific date
-  - Moving/Rolling Average for a specific timerange
+  - Moving/Rolling Average for a specific time range
   - Simple algorithm indicating buy, sell or hold
   
 ### Tech
