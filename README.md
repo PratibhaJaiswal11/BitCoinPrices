@@ -1,4 +1,4 @@
-# Bitcoin Price Tracke
+# Bitcoin Price Tracker
 
 Bitcoin Price Tracker allow you to track the price movement of Bitcoin. Following are the features:
   - Last week,month, year prices
