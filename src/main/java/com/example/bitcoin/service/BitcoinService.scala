@@ -11,7 +11,7 @@ import com.example.bitcoin.model.Price
 import java.time.LocalDate
 import org.apache.spark.sql.DataFrame
 import scala.collection.mutable.ListBuffer
-@Service
+//@Service
 //object BitcoinService {
 class BitcoinService {  
   val PRICE_FEED = "https://www.coinbase.com/api/v2/prices/BTC-USD/historic?period=all"
@@ -75,6 +75,15 @@ class BitcoinService {
     }
   }
   
+  def getHighestPrice(fromDate: String, toDate:String, window: Int): Unit = {
+    var startDate = LocalDate.parse(fromDate)
+    var endDate = LocalDate.parse(toDate)
+    val num = (endDate.toEpochDay() - startDate.toEpochDay())/window
+    println("num of intervals :" + num)
+    var selectedPrices = getPriceInTimeFrame(fromDate, toDate)
+    // Fetch the max price for that interval here     
+  }
+  
   private[this] def getPriceInTimeFrame(fromDate: String, toDate: String): DataFrame = {
     priceTimeDF.select(col("price").cast(DoubleType), col("date"))
       .filter($"date" <= lit(toDate.toString()) && $"date" > lit(fromDate.toString()))
@@ -86,6 +95,7 @@ class BitcoinService {
     scala.io.Source.fromURL(url).mkString
   }
   
-  def main (args: Array[String]){
-  }
+//  def main (args: Array[String]){
+//    getHighestPrice("2018-01-01","2018-09-01",10)
+//  }
 }
