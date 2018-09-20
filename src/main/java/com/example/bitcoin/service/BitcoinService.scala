@@ -11,7 +11,7 @@ import com.example.bitcoin.model.Price
 import java.time.LocalDate
 import org.apache.spark.sql.DataFrame
 import scala.collection.mutable.ListBuffer
-//@Service
+@Service
 //object BitcoinService {
 class BitcoinService {  
   val PRICE_FEED = "https://www.coinbase.com/api/v2/prices/BTC-USD/historic?period=all"
